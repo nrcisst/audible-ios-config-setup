@@ -2,12 +2,11 @@
     "name": "audible-ios-config",
     "version": "1.0.0",
     "description": "Configuration for Audible iOS app",
-    "main": "validate.js",
     "scripts": {
-        "validate": "ajv validate -s schema/validator.json -d config/main-ios-config.json"
+        "validate": "ajv validate -s schema/validator.json -d config/main-ios-config.json -r schema/draft-04-schema.json"
     },
     "dependencies": {
-        "ajv": "^8.12.0",
-        "ajv-cli": "^5.0.0"
+        "ajv": "6.12.6",
+        "ajv-cli": "3.3.0"
     }
 }
