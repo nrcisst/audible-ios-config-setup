@@ -3,10 +3,10 @@
     "version": "1.0.0",
     "description": "Configuration for Audible iOS app",
     "scripts": {
-        "validate": "ajv validate -s schema/validator.json -d config/main-ios-config.json -r schema/draft-04-schema.json"
+        "validate": "ajv --spec=draft4 validate -s schema/validator.json -d config/main-ios-config.json"
     },
     "dependencies": {
-        "ajv": "6.12.6",
-        "ajv-cli": "3.3.0"
+        "ajv-cli": "^5.0.0",
+        "ajv": "^8.12.0"
     }
 }
