@@ -5,11 +5,12 @@ phases:
     runtime-versions:
       nodejs: 18
     commands:
+      - echo "Installing dependencies"
       - npm install
   
   build:
     commands:
-      - echo "Validating configuration..."
+      - echo "Validating configuration"
       - npm run validate
 
 artifacts:
