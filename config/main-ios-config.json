@@ -1,0 +1,54 @@
+{
+  "MinimumPollingInterval": 86400,
+  "MaxVersionByOS": [
+    {
+      "OS": 10,
+      "Version": "3.1.2",
+      "Build": 527
+    },
+    {
+      "OS": 11,
+      "Version": "3.13.1",
+      "Build": 567
+    },
+    {
+      "OS": 12,
+      "Version": "3.24.2",
+      "Build": 607
+    },
+    {
+      "OS": 13,
+      "Version": "3.28.1",
+      "Build": 623
+    },
+    {
+      "OS": 14,
+      "Version": "3.65.1",
+      "Build": 703
+    },
+    {
+      "OS": 15,
+      "Version": "4.0.1",
+      "Build": "877"
+    },
+    {
+      "OS": 16,
+      "Version": "4.25",
+      "Build": "1324"
+    }
+  ],
+  "ForcedUpgrade": {
+    "Global": {
+      "LogoutOption": false,
+      "TriggerAppVersionAndBelow": "0.0",
+      "TriggerAppBuildAndBelow": 0
+    }
+  },
+  "SuggestedUpgrade": {
+    "Global": {
+      "ReminderIntervalSeconds": 86400,
+      "TriggerAppVersionAndBelow": 4.43,
+      "TriggerAppBuildAndBelow": 1632
+    }
+  }
+}
