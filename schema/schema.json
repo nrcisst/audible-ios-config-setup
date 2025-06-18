@@ -1,0 +1,100 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "title": "Audible iOS Configuration Validator",
+    "description": "Validates configurations for Audible iOS",
+    "type": "object",
+    "required": [
+        "MinimumPollingInterval",
+        "MaxVersionByOS",
+        "ForcedUpgrade",
+        "SuggestedUpgrade"
+    ],
+    "properties": {
+        "MinimumPollingInterval": {
+            "type": "integer",
+            "minimum": 0
+        },
+        "MaxVersionByOS": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "required": ["OS", "Version", "Build"],
+                "properties": {
+                    "OS": {
+                        "type": "integer"
+                    },
+                    "Version": {
+                        "type": "string",
+                        "pattern": "^\\d+\\.\\d+\\.?\\d*$"
+                    },
+                    "Build": {
+                        "type": "integer",
+                        "minimum": 0
+                    }
+                },
+                "additionalProperties": false
+            },
+            "minItems": 1
+        },
+        "ForcedUpgrade": {
+            "type": "object",
+            "required": ["Global"],
+            "properties": {
+                "Global": {
+                    "type": "object",
+                    "required": [
+                        "LogoutOption",
+                        "TriggerAppVersionAndBelow",
+                        "TriggerAppBuildAndBelow"
+                    ],
+                    "properties": {
+                        "LogoutOption": {
+                            "type": "boolean"
+                        },
+                        "TriggerAppVersionAndBelow": {
+                            "type": "string",
+                            "pattern": "^\\d+\\.\\d+$"
+                        },
+                        "TriggerAppBuildAndBelow": {
+                            "type": "integer",
+                            "minimum": 0
+                        }
+                    },
+                    "additionalProperties": false
+                }
+            },
+            "additionalProperties": false
+        },
+        "SuggestedUpgrade": {
+            "type": "object",
+            "required": ["Global"],
+            "properties": {
+                "Global": {
+                    "type": "object",
+                    "required": [
+                        "ReminderIntervalSeconds",
+                        "TriggerAppVersionAndBelow",
+                        "TriggerAppBuildAndBelow"
+                    ],
+                    "properties": {
+                        "ReminderIntervalSeconds": {
+                            "type": "integer",
+                            "minimum": 0
+                        },
+                        "TriggerAppVersionAndBelow": {
+                            "type": "string",
+                            "pattern": "^\\d+\\.\\d+$"
+                        },
+                        "TriggerAppBuildAndBelow": {
+                            "type": "integer",
+                            "minimum": 0
+                        }
+                    },
+                    "additionalProperties": false
+                }
+            },
+            "additionalProperties": false
+        }
+    },
+    "additionalProperties": false
+}
