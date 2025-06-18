@@ -47,7 +47,7 @@
   "SuggestedUpgrade": {
     "Global": {
       "ReminderIntervalSeconds": 86400,
-      "TriggerAppVersionAndBelow": 4.43,
+      "TriggerAppVersionAndBelow": "4.43",
       "TriggerAppBuildAndBelow": 1632
     }
   }
