@@ -1,5 +1,5 @@
 {
-  "MinimumPollingInterval": 86404,
+  "MinimumPollingInterval": 86400,
   "MaxVersionByOS": [
     {
       "OS": 10,
